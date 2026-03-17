@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>Dashboard | Web Child</title>
+
+<style>
+
+body{
+font-family:Arial;
+background:#111827;
+color:white;
+text-align:center;
+padding:60px;
+animation: fadeIn 1s ease;
+}
+
+nav{
+    justify-content: space-between;
+}
+
+nav ul{
+    list-style:none;
+    display:flex;
+    gap:30px;
+}
+
+nav ul li a{
+    text-decoration:none;
+    color:white;
+    font-size:16px;
+    transition:0.3s;
+}
+
+nav ul li a:hover{
+    color:#00e5ff;
+}
+
+/* Fade in animation */
+@keyframes fadeIn{
+from{
+opacity:0;
+transform:translateY(20px);
+}
+to{
+opacity:1;
+transform:translateY(0);
+}
+}
+
+button{
+padding:10px 20px;
+background:cyan;
+border:none;
+color:black;
+cursor:pointer;
+border-radius:15px;
+transition:0.3s;
+}
+
+button:hover{
+transform:scale(1.1);
+background:#00e5ff;
+}
+
+/* Tech cards */
+
+.tech-container{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
+margin-top:40px;
+}
+
+.tech-card{
+background:#1f2937;
+border-radius:15px;
+overflow:hidden;
+transition:0.4s;
+box-shadow:0 10px 20px rgba(0,0,0,0.4);
+}
+
+.tech-card:hover{
+transform:translateY(-10px) scale(1.03);
+box-shadow:0 20px 40px rgba(0,0,0,0.6);
+}
+
+.tech-card img{
+width:100%;
+height:160px;
+object-fit:cover;
+}
+
+.tech-content{
+padding:15px;
+}
+
+/* News section */
+
+.news-section{
+margin-top:60px;
+}
+
+.news-box{
+background:#1f2937;
+padding:20px;
+border-radius:12px;
+margin:15px auto;
+max-width:700px;
+transition:0.4s;
+}
+
+.news-box:hover{
+transform:translateX(10px);
+background:#374151;
+}
+
+</style>
+
+</head>
+
+<body>
+
+ <nav>
+        <ul>
+            <li><a href="webservice.html">Services</a></li>
+            <li><a href="webprojects.html">Projects</a></li>
+            <li><a href="webmarketing.html">Marketing</a></li>
+            <li><a href="webcontact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+<h1>Welcome to Web Child Dashboard</h1>
+
+<p id="welcome"></p>
+
+<button onclick="logout()">Logout</button>
+
+
+<!-- TECH FEATURE CARDS -->
+
+<div class="tech-container">
+
+<div class="tech-card">
+<img src="https://images.unsplash.com/photo-1518779578993-ec3579fee39f">
+<div class="tech-content">
+<h3>Artificial Intelligence</h3>
+<p>AI is powering automation, smart assistants, and modern data analysis.</p>
+</div>
+</div>
+
+<div class="tech-card">
+<img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b">
+<div class="tech-content">
+<h3>Cyber Security</h3>
+<p>Businesses are investing heavily in protection against cyber threats.</p>
+</div>
+</div>
+
+<div class="tech-card">
+<img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c">
+<div class="tech-content">
+<h3>Cloud Computing</h3>
+<p>Cloud platforms allow developers to deploy and scale apps worldwide.</p>
+</div>
+</div>
+
+<div class="tech-card">
+<img src="https://images.unsplash.com/photo-1485827404703-89b55fcc595e">
+<div class="tech-content">
+<h3>Robotics</h3>
+<p>Automation and robotics are changing manufacturing and logistics.</p>
+</div>
+</div>
+
+</div>
+
+
+<!-- TECHNOLOGY NEWS -->
+
+<div class="news-section">
+
+<h2>Latest Technology News</h2>
+
+<div class="news-box">
+<h3>AI continues to grow globally</h3>
+<p>Companies worldwide are racing to build powerful AI systems that transform industries.</p>
+</div>
+
+<div class="news-box">
+<h3>Cybersecurity becomes top priority</h3>
+<p>Governments and companies are investing more in digital security infrastructure.</p>
+</div>
+
+<div class="news-box">
+<h3>Quantum computing research accelerates</h3>
+<p>Scientists are making breakthroughs that may revolutionize computing power.</p>
+</div>
+
+</div>
+
+
+<script>
+
+let user = localStorage.getItem("webchildUser")
+
+if(!user){
+window.location.href="weblogin.html"
+}
+
+document.getElementById("welcome").innerText="Hello " + user
+
+function logout(){
+
+localStorage.removeItem("webchildUser")
+
+window.location.href="Webchild.html"
+
+}
+
+</script>
+
+</body>
+</html>

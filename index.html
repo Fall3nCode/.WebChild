@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Web Child | Digital Marketing & Tech</title>
+<link rel="stylesheet" href="Webchild.css">
+</head>
+
+<body>
+
+<header>
+<div class="logo">
+<h1>WEB CHILD</h1>
+<p>Digital Marketing & Tech Company</p>
+</div>
+
+<nav>
+<ul>
+<li><a href="#">Home</a></li>
+<li><a href="weblogin.html">Services</a></li>
+<li><a href="weblogin.html">Projects</a></li>
+<li><a href="weblogin.html">Marketing</a></li>
+<li><a href="weblogin.html">Contact</a></li>
+<li><button onclick="goLogin()">Sign Up / Login</button></li>
+</ul>
+</nav>
+</header>
+
+<section class="parent">
+<div class="parent-contain">
+<h2>Grow Your Business With Digital Marketing</h2>
+<p>Web Child helps businesses grow online with websites, SEO, advertising, and powerful digital marketing strategies.</p>
+<a href="./weblogin.html"><button>Start Growing</button></a>
+</div>
+</section>
+
+<section class="services">
+<h2>Our Services</h2>
+
+<div class="service-box">
+<h3>Web Development</h3>
+<p>Modern and responsive websites for businesses and startups.</p>
+</div>
+
+<div class="service-box">
+<h3>SEO Optimization</h3>
+<p>Rank your business on Google and attract more customers.</p>
+</div>
+
+<div class="service-box">
+<h3>Social Media Marketing</h3>
+<p>Grow your brand on Instagram, Facebook, and other platforms.</p>
+</div>
+
+<div class="service-box">
+<h3>Online Advertising</h3>
+<p>Run powerful ad campaigns on Google Ads and social media.</p>
+</div>
+
+<div class="service-box">
+<h3>Analytics & Growth</h3>
+<p>Track traffic, customers, and conversions using data analytics.</p>
+</div>
+
+</section>
+
+<section class="stats">
+
+<h2>Our Impact</h2>
+
+<div class="stat-box">
+<h3>120+</h3>
+<p>Businesses Helped</p>
+</div>
+
+<div class="stat-box">
+<h3>500K+</h3>
+<p>Website Visitors Generated</p>
+</div>
+
+<div class="stat-box">
+<h3>300%</h3>
+<p>Average Growth For Clients</p>
+</div>
+
+</section>
+
+<section class="testimonials">
+
+<h2>What Our Clients Say</h2>
+
+<div class="testimonial">
+<p>"Web Child helped our business grow online. Our sales increased in 3 months!"</p>
+<strong>- Sarah, Business Owner</strong>
+</div>
+
+<div class="testimonial">
+<p>"Their SEO and marketing strategy brought us thousands of visitors."</p>
+<strong>- David, Startup Founder</strong>
+</div>
+
+</section>
+
+<section class="newsletter">
+
+<h2>Get Digital Marketing Tips</h2>
+<p>Subscribe to receive marketing strategies and business growth tips.</p>
+
+<input type="email" id="emailInput" placeholder="Enter your email">
+<button onclick="subscribe()">Subscribe</button>
+
+</section>
+
+<footer>
+<p>© 2026 Web Child Digital Marketing & Tech Company. All rights reserved.</p>
+</footer>
+
+<script>
+
+    function subscribe(){
+
+    let email = document.getElementById("emailInput").value
+
+  if(email === ""){
+    return
+}
+
+    localStorage.setItem("subscriberEmail", email)
+
+    alert(
+       "Thanks for subscribing!"
+    )
+  
+}
+
+let user = localStorage.getItem("webchildUser")
+
+if(user){
+window.location.href="webdashboard.html"
+}
+
+function goLogin(){
+window.location.href="weblogin.html"
+}
+
+</script>
+
+</body>
+</html>

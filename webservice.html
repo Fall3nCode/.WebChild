@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Services | Web Child</title>
+
+<style>
+
+body{
+font-family:Arial;
+background:#0b0f19;
+color:white;
+text-align:center;
+padding:60px;
+}
+
+h1{
+margin-bottom:40px;
+color:#00e5ff;
+}
+
+.services-container{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
+}
+
+.service-card{
+background:#111827;
+padding:25px;
+border-radius:12px;
+transition:0.3s;
+border:1px solid #1f2937;
+}
+
+.service-card:hover{
+transform:translateY(-10px);
+box-shadow:0 10px 20px cadetblue;
+}
+
+.service-card h3{
+color:#00e5ff;
+margin-bottom:10px;
+}
+
+button{
+margin-top:30px;
+padding:10px 20px;
+background:#00e5ff;
+border:none;
+border-radius:8px;
+cursor:pointer;
+}
+
+</style>
+</head>
+
+<body>
+
+<h1>Our Services</h1>
+
+<div class="services-container">
+
+<div class="service-card">
+<h3>Web Development</h3>
+<p>We build modern responsive websites for businesses and startups.</p>
+</div>
+
+<div class="service-card">
+<h3>App Development</h3>
+<p>Mobile and web applications with powerful functionality.</p>
+</div>
+
+<div class="service-card">
+<h3>SEO Optimization</h3>
+<p>Rank higher on Google and bring more traffic to your business.</p>
+</div>
+
+<div class="service-card">
+<h3>Cyber Security</h3>
+<p>Protect your systems from digital threats and vulnerabilities.</p>
+</div>
+
+<div class="service-card">
+<h3>Digital Marketing</h3>
+<p>Marketing strategies to grow your brand and reach customers.</p>
+</div>
+
+</div>
+
+<br>
+
+<button onclick="window.location.href='webdashboard.html'">Back to Dashboard</button>
+
+</body>
+</html>

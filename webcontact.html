@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>Contact | Web Child</title>
+
+<style>
+
+body{
+font-family:Arial;
+background:#0b0f19;
+color:white;
+text-align:center;
+padding:60px;
+}
+
+h1{
+color: lightslategray;
+margin-bottom:20px;
+}
+
+.contact-form{
+max-width:500px;
+margin:auto;
+background:#111827;
+padding:30px;
+border-radius:12px;
+border:1px solid #1f2937;
+}
+
+.hide{
+    color: red;
+}
+
+input, textarea{
+width:100%;
+padding:10px;
+margin:10px 0;
+border:none;
+border-radius:5px;
+}
+
+button{
+padding:10px 20px;
+background:#00e5ff;
+border:none;
+border-radius:8px;
+cursor:pointer;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<h1>Contact Web Child</h1>
+
+<div class="contact-form">
+
+<input type="text" id="nameInput" placeholder="Your Name">
+<p class="hide" hidden>please enter your name</p>
+
+<input type="email" id="emailInput" placeholder="Your Email">
+<p class="hide" hidden>please enter your email</p>
+
+<textarea rows="5" placeholder="Your Message"></textarea>
+
+<button onclick="sendMessage()">Send Message</button>
+
+</div><br>
+
+<button onclick="window.location.href='webdashboard.html'">Back to Dashboard</button>
+
+<script>
+const nameerror = document.querySelectorAll(".hide")[0]
+const emailerror = document.querySelectorAll(".hide")[1]
+
+function sendMessage(){
+    const name = document.getElementById("nameInput").value
+    const email = document.getElementById("emailInput").value
+
+    nameerror.hidden = true;
+    emailerror.hidden = true;
+
+    if(name === ""){
+        nameerror.hidden = false;
+    }
+
+    if(email === ""){
+        emailerror.hidden = false;
+    }
+
+    if(name !== "" && email !== ""){
+       alert("Message sent! We will contact you soon.")
+    } 
+};
+
+</script>
+
+</body>
+</html>
